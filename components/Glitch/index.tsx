@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
-export const glitchAnimation1 = keyframes`
+export const glitchKeyframesRed = keyframes`
    0% {
      clip-path: inset(79% 0 14% 0);
    }
@@ -57,7 +57,7 @@ export const glitchAnimation1 = keyframes`
    }
 `
 
-export const glitchAnimation2 = keyframes`
+export const glitchKeyframesBlue = keyframes`
    0% {
      clip-path: inset(90% 0 3% 0);
    }
@@ -114,15 +114,6 @@ export const glitchAnimation2 = keyframes`
    }
 `
 
-export const LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #18191a;
-`
-
 export const SvgContainer = styled.div`
   svg {
     width: 100%;
@@ -131,10 +122,36 @@ export const SvgContainer = styled.div`
   }
 `
 
-export const GlitchContainer = styled.div`
+const GlitchAnimationRed = css`
+  animation: ${glitchKeyframesRed} 2s infinite ease alternate-reverse;
+`
+
+const GlitchAnimationRedHover = css`
+  display: block;
+  ${GlitchAnimationRed}
+`
+
+const GlitchAnimationBlue = css`
+  animation: ${glitchKeyframesBlue} 3s infinite ease alternate-reverse;
+`
+
+const GlitchAnimationBlueHover = css`
+  display: block;
+  ${GlitchAnimationRed}
+`
+
+export const GlitchContainer = styled(({ animationOnHover, ...props }) => <div {...props} />)`
   width: 200px;
   height: 50px;
   position: relative;
+  &:hover {
+    ${SvgContainer}:nth-of-type(1) {
+      ${(props) => (props.animationOnHover ? GlitchAnimationRedHover : null)}
+    }
+    ${SvgContainer}:nth-of-type(3) {
+      ${(props) => (props.animationOnHover ? GlitchAnimationBlueHover : null)}
+    }
+  }
   ${SvgContainer} {
     position: absolute;
     top: 0;
@@ -145,7 +162,7 @@ export const GlitchContainer = styled.div`
   ${SvgContainer}:nth-of-type(1) {
     left: 2px;
     background-color: #18191a;
-    animation: ${glitchAnimation1} 2s infinite ease alternate-reverse;
+    ${(props) => (!props.animationOnHover ? GlitchAnimationRed : 'display: none;')}
     svg {
       filter: drop-shadow(-2px 0 2px #ff0000);
     }
@@ -153,9 +170,15 @@ export const GlitchContainer = styled.div`
   ${SvgContainer}:nth-of-type(3) {
     left: -2px;
     background-color: #18191a;
-    animation: ${glitchAnimation2} 3s infinite ease alternate-reverse;
+    ${(props) => (!props.animationOnHover ? GlitchAnimationBlue : 'display: none;')}
     svg {
       filter: drop-shadow(2px 0 2px #0000ff);
     }
   }
+`
+
+export const GlitchSymbolContainer = styled(GlitchContainer)`
+  width: 42px;
+  height: 42px;
+  position: relative;
 `

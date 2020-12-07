@@ -1,17 +1,9 @@
 import { NextPage } from 'next'
-import Head from 'next/head'
 
-import FullPageLogo from '../components/FullPageLogo'
+import LayoutBase from '../components/LayoutBase'
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Scrpttag</title>
-      </Head>
-      <FullPageLogo />
-    </>
-  )
+  return <LayoutBase>Hello, Scrpttag!</LayoutBase>
 }
 
 export default Home
