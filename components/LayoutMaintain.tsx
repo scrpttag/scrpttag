@@ -38,7 +38,6 @@ const LayoutMaintain: FunctionComponent<LayoutMaintainProps> = () => {
           <Scrpttag.Logo />
         </SvgContainer>
       </GlitchContainer>
-      <Subtitle>Coming soon</Subtitle>
     </LogoContainer>
   )
 }

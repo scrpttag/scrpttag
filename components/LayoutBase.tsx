@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React, { FunctionComponent } from 'react'
 
+import Footer from './Footer'
 import Header from './Header'
 
 type LayoutBaseProps = {
@@ -14,7 +15,8 @@ const LayoutBase: FunctionComponent<LayoutBaseProps> = ({ pageTitle, children })
         <title>Scrpttag {pageTitle && `- ${pageTitle}`}</title>
       </Head>
       <Header />
-      {children}
+      <main className="flex flex-col">{children}</main>
+      <Footer />
     </div>
   )
 }
