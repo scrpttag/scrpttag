@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React, { FunctionComponent } from 'react'
 
 import { GlitchSymbolContainer, SvgContainer } from './Glitch'
+import Menu from './Menu'
 import Scrpttag from './Scrpttag'
 
 type HeaderProps = {}
@@ -24,7 +25,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
           </GlitchSymbolContainer>
         </a>
       </Link>
-      <div className="flex items-center justify-center flex-grow pt-4 dark:text-gray-100">Menu</div>
+      <Menu />
     </header>
   )
 }
