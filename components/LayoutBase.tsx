@@ -10,12 +10,12 @@ type LayoutBaseProps = {
 
 const LayoutBase: FunctionComponent<LayoutBaseProps> = ({ pageTitle, children }) => {
   return (
-    <div className="flex min-h-screen dark:bg-gray-900">
+    <div className="flex flex-col min-h-screen dark:bg-gray-900">
       <Head>
         <title>Scrpttag {pageTitle && `- ${pageTitle}`}</title>
       </Head>
       <Header />
-      <main className="flex flex-col">{children}</main>
+      <main className="flex flex-col self-stretch flex-grow pl-56 pr-24">{children}</main>
       <Footer />
     </div>
   )
