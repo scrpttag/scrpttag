@@ -1,13 +1,17 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
+import { tailwind } from '../config/theme'
+
 type FooterLinkProps = {
   href: string
   isLast?: boolean
 }
 
 const SocialLinkList = styled.ul`
-  writing-mode: tb;
+  @media (min-width: ${tailwind.theme.screens.lg}) {
+    writing-mode: tb;
+  }
 `
 
 const FooterLink: FunctionComponent<FooterLinkProps> = ({ href, children, isLast = false }) => {
@@ -24,8 +28,8 @@ const FooterLink: FunctionComponent<FooterLinkProps> = ({ href, children, isLast
 
 const Footer: FunctionComponent = () => {
   return (
-    <footer className="flex text-sm static w-full h-auto lg:fixed lg:z-10 lg:right-0 lg:w-auto lg:h-full dark:bg-gray-900 border-l-2 dark:border-gray-600 items-center flex-col p-6">
-      <SocialLinkList className="flex list-none p-0 text-gray-100 h-full">
+    <footer className="flex text-sm static w-full h-auto border-t-2 lg:border-l-2 lg:fixed lg:z-10 lg:right-0 lg:w-auto lg:h-full lg:flex-col dark:bg-gray-900 dark:border-gray-600 items-center p-6">
+      <SocialLinkList className="flex list-none p-0 text-gray-100 w-full h-auto lg:w-full lg:h-full">
         <FooterLink href="https://www.facebook.com/scrpttag">Facebook</FooterLink>
         <FooterLink href="https://twitter.com/scrpttag">Twitter</FooterLink>
         <FooterLink href="https://www.instagram.com/scrpttag" isLast>
