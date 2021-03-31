@@ -1,6 +1,7 @@
-import Link from 'next/link'
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
+
+import ActiveLink from '../ActiveLink'
 
 type MenuProps = {}
 
@@ -31,18 +32,14 @@ const Menu: FunctionComponent<MenuProps> = () => {
       </Button>
       <ul className="flex lg:flex-col">
         <li className="block mr-2 lg:mr-0 lg:mb-2">
-          <Link href="/">
-            <a href="/" className="block p-2 lg:px-0 lg:py-2">
-              Home
-            </a>
-          </Link>
+          <ActiveLink href="/" className="block p-2 lg:px-0 lg:py-2">
+            Home
+          </ActiveLink>
         </li>
         <li className="block">
-          <Link href="/links">
-            <a href="/links" className="block p-2 lg:px-0 lg:py-2">
-              Links
-            </a>
-          </Link>
+          <ActiveLink href="/links" className="block p-2 lg:px-0 lg:py-2">
+            Links
+          </ActiveLink>
         </li>
       </ul>
     </div>
