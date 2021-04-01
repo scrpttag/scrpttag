@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
   darkMode: 'class',
@@ -24,5 +26,13 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase, config }) {
+      addBase({
+        h1: { fontSize: config('theme.fontSize.2xl') },
+        h2: { fontSize: config('theme.fontSize.xl') },
+        h3: { fontSize: config('theme.fontSize.lg') },
+      })
+    }),
+  ],
 }
