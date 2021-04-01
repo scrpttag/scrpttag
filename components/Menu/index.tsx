@@ -34,7 +34,7 @@ const Menu: FunctionComponent<MenuProps> = () => {
         <li className="block mr-2 lg:mr-0 lg:mb-2">
           <ActiveLink
             href="/"
-            className="block p-2 lg:px-0 lg:py-2"
+            className="block p-2 lg:px-0 lg:py-2 transition-all"
             defaultClassName="text-gray-300 hover:text-gray-100"
             activeClassName="text-gray-100"
           >
@@ -44,7 +44,7 @@ const Menu: FunctionComponent<MenuProps> = () => {
         <li className="block">
           <ActiveLink
             href="/links"
-            className="block p-2 lg:px-0 lg:py-2"
+            className="block p-2 lg:px-0 lg:py-2 transition-all"
             defaultClassName="text-gray-300 hover:text-gray-100"
             activeClassName="text-gray-100"
           >

@@ -15,7 +15,7 @@ const LayoutBase: FunctionComponent<LayoutBaseProps> = ({ pageTitle, children })
         <title>Scrpttag {pageTitle && `- ${pageTitle}`}</title>
       </Head>
       <Header />
-      <main className="flex flex-col self-stretch flex-grow p-6 lg:pt-20 lg:pb-0 lg:pl-72 lg:pr-36">{children}</main>
+      <main className="flex flex-col self-stretch flex-grow px-6 py-10 lg:py-20 lg:pl-72 lg:pr-36">{children}</main>
       <Footer />
     </div>
   )

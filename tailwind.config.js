@@ -8,19 +8,50 @@ module.exports = {
       gray: {
         50: '#FAFBFB',
         100: '#F5F6F7',
-        200: '#878889',
-        300: '#505152',
-        400: '#343637',
-        500: '#262829',
-        600: '#1F2122',
-        700: '#1C1E1F',
-        800: '#1A1C1D',
+        200: '#BEBFC0',
+        300: '#878889',
+        400: '#505152',
+        500: '#343637',
+        600: '#262829',
+        700: '#1F2122',
+        800: '#191B1C',
         900: '#181A1B',
       },
     },
     fontFamily: {
       sans: ['"Source Sans Pro"', 'sans-serif'],
       mono: ['"Source Code Pro"', 'monospace'],
+    },
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.200'),
+            strong: {
+              color: theme('colors.gray.100'),
+              fontWeight: '700',
+            },
+            a: {
+              color: theme('colors.gray.100'),
+              textDecoration: 'underline',
+              '&:hover': {
+                color: theme('colors.gray.100'),
+                textDecoration: 'none',
+              },
+            },
+            h1: {
+              color: theme('colors.gray.100'),
+              fontFamily: theme('fontFamily.mono'),
+              fontWeight: '700',
+            },
+            h2: {
+              color: theme('colors.gray.100'),
+              fontFamily: theme('fontFamily.mono'),
+              fontWeight: '700',
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
@@ -34,5 +65,6 @@ module.exports = {
         h3: { fontSize: config('theme.fontSize.lg') },
       })
     }),
+    require('@tailwindcss/typography'),
   ],
 }
