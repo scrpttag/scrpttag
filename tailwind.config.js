@@ -16,6 +16,10 @@ module.exports = {
         900: '#181A1B',
       },
     },
+    fontFamily: {
+      sans: ['"Source Sans Pro"', 'sans-serif'],
+      mono: ['"Source Code Pro"', 'monospace'],
+    },
   },
   variants: {
     extend: {},

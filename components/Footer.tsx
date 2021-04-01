@@ -28,7 +28,7 @@ const FooterLink: FunctionComponent<FooterLinkProps> = ({ href, children, isLast
 
 const Footer: FunctionComponent = () => {
   return (
-    <footer className="flex text-sm static w-full h-auto border-t-2 lg:border-l-2 lg:fixed lg:z-10 lg:right-0 lg:w-auto lg:h-full lg:flex-col dark:bg-gray-900 dark:border-gray-600 items-center p-6">
+    <footer className="flex text-sm static w-full h-auto border-t-2 lg:border-l-2 lg:fixed lg:z-10 lg:right-0 lg:w-auto lg:h-full lg:flex-col dark:bg-gray-900 dark:border-gray-600 items-center p-6 lg:py-14">
       <SocialLinkList className="flex list-none p-0 text-gray-100 w-full h-auto lg:w-full lg:h-full">
         <FooterLink href="https://www.facebook.com/scrpttag">Facebook</FooterLink>
         <FooterLink href="https://twitter.com/scrpttag">Twitter</FooterLink>

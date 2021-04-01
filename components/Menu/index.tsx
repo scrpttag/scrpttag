@@ -30,14 +30,24 @@ const Menu: FunctionComponent<MenuProps> = () => {
         <Line className="dark:bg-gray-100 transition-all" width="70%" />
         <Line className="dark:bg-gray-100 transition-all" />
       </Button>
-      <ul className="flex lg:flex-col">
+      <ul className="flex font-mono lg:flex-col">
         <li className="block mr-2 lg:mr-0 lg:mb-2">
-          <ActiveLink href="/" className="block p-2 lg:px-0 lg:py-2">
+          <ActiveLink
+            href="/"
+            className="block p-2 lg:px-0 lg:py-2"
+            defaultClassName="text-gray-300 hover:text-gray-100"
+            activeClassName="text-gray-100"
+          >
             Home
           </ActiveLink>
         </li>
         <li className="block">
-          <ActiveLink href="/links" className="block p-2 lg:px-0 lg:py-2">
+          <ActiveLink
+            href="/links"
+            className="block p-2 lg:px-0 lg:py-2"
+            defaultClassName="text-gray-300 hover:text-gray-100"
+            activeClassName="text-gray-100"
+          >
             Links
           </ActiveLink>
         </li>
