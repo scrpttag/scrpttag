@@ -8,7 +8,7 @@ type MetaProps = {
 const Meta: FunctionComponent<MetaProps> = ({ date, author = 'Gabor Molnar' }) => {
   return (
     <p className="text-sm text-gray-300 font-mono">
-      {date} <strong>{author}</strong>
+      {date} <strong className="text-gray-200">{author}</strong>
     </p>
   )
 }

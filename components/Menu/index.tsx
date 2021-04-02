@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
-import ActiveLink from '../ActiveLink'
+import ActiveLink from './elements/ActiveLink'
 
 type MenuProps = {}
 
