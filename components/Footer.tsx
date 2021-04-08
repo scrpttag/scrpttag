@@ -19,7 +19,7 @@ const FooterLink: FunctionComponent<FooterLinkProps> = ({ href, children, isLast
   const margin = isLast ? 'mr-auto lg:mb-auto' : 'mr-1 lg:mb-1'
   return (
     <li className={`${margin} ${listClasses}`}>
-      <a className="p-4 inline-flex items-center" href={href} target="_blank">
+      <a className="p-4 inline-flex items-center" href={href} rel="noopener noreferrer" target="_blank">
         {children}
       </a>
     </li>

@@ -23,16 +23,16 @@ const Codepen: FunctionComponent<CodepenProps> = ({ title, slugHash, user = 'gab
         allowFullScreen
       >
         See the Pen{' '}
-        <a href={`https://codepen.io/gabemiller/pen/${slugHash}`} target="_blank">
+        <a href={`https://codepen.io/gabemiller/pen/${slugHash}`} rel="noopener noreferrer" target="_blank">
           {title}
         </a>{' '}
         by
         {name} (
-        <a href={`https://codepen.io/${user}`} target="_blank">
+        <a href={`https://codepen.io/${user}`} rel="noopener noreferrer" target="_blank">
           @{user}
         </a>
         ) on{' '}
-        <a href="https://codepen.io" target="_blank">
+        <a href="https://codepen.io" rel="noopener noreferrer" target="_blank">
           CodePen
         </a>
         .
