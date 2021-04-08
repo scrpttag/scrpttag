@@ -5,7 +5,7 @@ import Direction from '../components/Menu/elements/Direction'
 
 const Links: NextPage = () => {
   return (
-    <LayoutBase>
+    <LayoutBase title="Links | Scrpttag" url="/links">
       <h1 className="text-3xl md:text-5xl font-mono text-gray-100 mb-10 text-center lg:text-left">Links</h1>
       <ul className="flex flex-col items-stretch text-center space-y-8 list-none md:items-center lg:items-start">
         <li>

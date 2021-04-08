@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
 
-import Meta from '../components/Article/elements/Meta'
+import Author from '../components/Article/elements/Author'
 import LayoutBase from '../components/LayoutBase'
 
 const Home: NextPage = () => {
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           <article>
             <Link href="/posts/from-challenge-to-scrpttag">
               <a className="block group">
-                <Meta date="2nd April, 2021" />
+                <Author date="2nd April, 2021" />
                 <h1 className="text-3xl text-gray-100 font-mono my-4 group-hover:underline lg:my-6">From Challenge to Scrpttag</h1>
                 <h2 className="text-lg text-gray-200">At some point we need to step out from the usual and challenge ourselves.</h2>
               </a>
