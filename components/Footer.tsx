@@ -16,10 +16,10 @@ const SocialLinkList = styled.ul`
 
 const FooterLink: FunctionComponent<FooterLinkProps> = ({ href, children, isLast = false }) => {
   const listClasses = 'uppercase font-bold text-gray-300 hover:text-gray-100 cursor-pointer transition-colors'
-  const margin = isLast ? 'mr-auto lg:mb-auto' : 'mr-1 lg:mb-1'
+  const margin = isLast ? 'sm:mr-auto lg:mb-auto' : 'sm:mr-1 lg:mb-1'
   return (
     <li className={`${margin} ${listClasses}`}>
-      <a className="p-4 inline-flex items-center" href={href} target="_blank">
+      <a className="p-4 inline-flex items-center" href={href} rel="noopener noreferrer" target="_blank">
         {children}
       </a>
     </li>
@@ -29,7 +29,7 @@ const FooterLink: FunctionComponent<FooterLinkProps> = ({ href, children, isLast
 const Footer: FunctionComponent = () => {
   return (
     <footer className="flex text-sm static w-full h-auto border-t-2 lg:border-l-2 lg:fixed lg:z-10 lg:right-0 lg:w-auto lg:h-full lg:flex-col dark:bg-gray-900 dark:border-gray-600 items-center p-6 lg:py-14">
-      <SocialLinkList className="flex list-none p-0 text-gray-100 w-full h-auto lg:w-full lg:h-full">
+      <SocialLinkList className="flex flex-col items-center list-none p-0 text-gray-100 w-full h-auto sm:flex-row lg:w-full lg:h-full">
         <FooterLink href="https://www.facebook.com/scrpttag">Facebook</FooterLink>
         <FooterLink href="https://twitter.com/scrpttag">Twitter</FooterLink>
         <FooterLink href="https://www.instagram.com/scrpttag" isLast>

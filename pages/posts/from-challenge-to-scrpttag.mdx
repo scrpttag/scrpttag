@@ -1,10 +1,12 @@
 import Article from '../../components/Article'
 import Codepen from '../../components/Article/elements/Codepen'
-import Meta from '../../components/Article/elements/Meta'
+import Author from '../../components/Article/elements/Author'
+
+![scrpttag animated logo](/scrpttag.gif)
 
 # From Challenge to Scrpttag
 
-<Meta date="2nd April, 2021" />
+<Author date="2nd April, 2021" />
 
 At some point we need to step out from the usual and challenge ourselves. You must have heard about different kind of code challenges like #100DaysofCode, #30DaysofCode or #100DaysofHacking.
 
@@ -18,7 +20,7 @@ What kind of components do I implement? There is no limitation. There is not a l
 ## It begins
 What could be the best start of this challenge then implementing my own version of the most common component, **the button**:
 
-<Codepen title="Button  #28ComponentsOfFebruaryDay1" slugHash="qBqEGKJ" loadScript/>
+<Codepen title="Button  #28ComponentsOfFebruaryDay1" slugHash="qBqEGKJ" loadScript />
 
 It was really a basic one so I had to think about in what way it could challenge me. And the idea just came up. I would implement more version of it with hover, active, focus and disabled state.
 And a bonus one with the loading state. And this was complex enough to be a great start.
@@ -28,28 +30,28 @@ However, usually we don't implement buttons from scratch. Most of the time we us
 ## Day's gone
 On the following days I was a bit bold and I tried to implement bigger components examining big, well-known applications like **Google Keep** or **Instagram**. Here is my version of the Google Keep called **Scrpttag Hold**. _What is Scrpttag? I'll tell you a bit later._
 
-<Codepen title="Hold #28ComponentsOfFebruaryDay3" slugHash="LYbpjRp"/>
+<Codepen title="Hold #28ComponentsOfFebruaryDay3" slugHash="LYbpjRp" />
 
 And those were too huge to be a one-day project for sure. Even so I had never told anyone that the component should have been fully implemented. _Anyway, is anything implemented fully ever?_
 
 ## On my way
 Codepen seemed to be a great place for my code base. No fuss on IDE configuration, committing code, testing it locally or even publish it on some server or serverless hosting. And I have never imagined that one of my component would be selected and be on front page of the site. But this one is:
 
-<Codepen title="Wait, it's loading #28ComponentsOfFebruaryDay12" slugHash="PobWwar"/>
+<Codepen title="Wait, it's loading #28ComponentsOfFebruaryDay12" slugHash="PobWwar" />
 
 It's my habit to add a touch of personality to the things I create in a not so common way they should be interpreted. Easter eggs. Yes, I hide some in several components like in this one. If you find them _(and I am sure you will)_, I hope you'll enjoy them as much as I do.
 
 ## Everything leads somewhere
 On the 4th day of the component challenge I introduced you the logo of the one and only professional blog of mine, the **[Scrpttag](https://scrpttag.com)**. This was the first place and time where you could get to know about Scrpttag. And I am satisfied with the result of this darkish, animated introduction:
 
-<Codepen title="Switch Dark #28ComponentsOfFebruaryDay4" slugHash="wvoMGBE"/>
+<Codepen title="Switch Dark #28ComponentsOfFebruaryDay4" slugHash="wvoMGBE" />
 
 The actual implementation of the blog seemed so far away at that time. Be consistent and even with small steps you can reach your destination. Or at least these were what I said to myself. And here we are.
 
 ## Scrpttag is now
 Regarding to my personality I always try to frame my projects. What has a beginning there should have an end too. Except I could not finish this challenge with the same complexity and difficulty level as I started it. Final exam time. The last component was actually the Scrpttag itself, not fully functioning, instead the prototype of the blog. And you could get an insight.
 
-<Codepen title="The Scrpttag has You #28ComponentsOfFebruaryDay28" slugHash="abBYLjX"/>
+<Codepen title="The Scrpttag has You #28ComponentsOfFebruaryDay28" slugHash="abBYLjX" />
 
 Every path led me here and it just a beginning of an other journey.
 
@@ -62,4 +64,13 @@ Of course I have not written about the other 23 components in this article. But 
 
 Thank you for reading this. Which one is your favourite? Shall I write in depth tutorial post about one or an other?
 
-export default ({ children })  => <Article>{children}</Article>
+export default ({ children }) => (
+  <Article
+    description="At some point we need to step out from the usual and challenge ourselves. You must have heard about different kind of code challenges like #100DaysofCode, #30DaysofCode or #100DaysofHacking."
+    image="/scrpttag.gif"
+    title="From Challenge to Scrpttag | Scrpttag"
+    url="/from-challenge-to-scrpttag"
+  >
+    {children}
+  </Article>
+)
